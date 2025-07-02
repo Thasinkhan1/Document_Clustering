@@ -1,0 +1,12 @@
+kaggle
+nltk
+gensim
+tensorflow
+pandas
+numpy
+matplotlib
+pathlib
+scikit-learn
+streamlit
+pillow
+opencv-python-headless
