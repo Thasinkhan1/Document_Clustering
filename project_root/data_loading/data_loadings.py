@@ -30,16 +30,6 @@ def save_lemmtized_word(lemmatized_word):
         json.dump(lemmatized_word, f)
         
         
-data = load_data()
-
-corpus = cleaned_data.clean_data(data)
-
-tokens_ = transforming_data.apply_tokenization(corpus)
-
-lemma_word = transforming_data.apply_lemmatizer(tokens_)
-
-saving_lemmatized_word = save_lemmtized_word(lemma_word)
-        
 def loading_lemmatized_word():
     
     with open(config.SAVED_LEMMATIZED_WORD_PATH, 'r') as f:

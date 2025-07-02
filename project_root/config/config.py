@@ -8,8 +8,10 @@ LDA_MODEL = "project_root/models/lda_model.gensim"
 
 SAVE_LEMMAIZED_WORD_PATH = "project_root/models"
 
-SAVED_LEMMATIZED_WORD_PATH = "project_root/models/lemmatized.txt"
+SAVED_LEMMATIZED_WORD_PATH = "/home/thasin/Document-Clustring/project_root/models/lemmatized.txt"
 
 SAVE_MODEL = "project_root/models"
 
-SAVED_MODEL = "project_root/models/lda_model.gensim"
+SAVED_MODEL = "/home/thasin/Document-Clustring/project_root/models/lda_model.gensim"
+
+SAVED_DICT = "/home/thasin/Document-Clustring/project_root/models/dictnory.dict"

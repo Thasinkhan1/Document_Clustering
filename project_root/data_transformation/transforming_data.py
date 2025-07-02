@@ -9,6 +9,7 @@ from data_loading import data_loadings
 def tokenize(text):
     tokens = gensim.utils.simple_preprocess(text, deacc=True)
     return tokens
+
 def apply_tokenization(corpus):
     tokenized_text = []
     

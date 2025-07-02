@@ -1,0 +1,30 @@
+#==>(.venv) thasin@LAPTOP-UIR85DA4:~/Document-Clustring$ python3 project_root/inference.py==|
+
+Tokenized: [['crop', 'leaves', 'have', 'yellow', 'spots', 'and', 'fungal', 'infection']]
+
+Lemmatized: ['crop', 'leave', 'have', 'yellow', 'spot', 'and', 'fungal', 'infection']
+
+BoW: [(288, 1), (739, 1), (7521, 1), (9043, 1), (16927, 1), (28839, 1), (50683, 1), (57081, 1)]
+
+Topic 0: 0.024*"edu" + 0.011*"com" + 0.010*"religion" + 0.010*"say" + 0.010*"talk" + 0.010*"god" + 0.008*"atheism" + 0.008*"alt" + 0.007*"cmu" + 0.007*"write"
+Topic 1: 0.019*"soc" + 0.018*"culture" + 0.011*"talk" + 0.010*"politic" + 0.007*"jewish" + 0.007*"turkish" + 0.007*"israel" + 0.006*"mideast" + 0.006*"war" + 0.005*"people"
+Topic 2: 0.063*"edu" + 0.015*"news" + 0.015*"cmu" + 0.014*"com" + 0.012*"apr" + 0.012*"uiuc" + 0.011*"cs" + 0.011*"talk" + 0.010*"alt" + 0.009*"srv"
+Topic 3: 0.009*"use" + 0.009*"one" + 0.006*"would" + 0.005*"sci" + 0.005*"also" + 0.004*"time" + 0.004*"make" + 0.004*"system" + 0.004*"well" + 0.004*"may"
+Topic 4: 0.081*"edu" + 0.032*"com" + 0.031*"cmu" + 0.025*"cs" + 0.023*"apr" + 0.018*"news" + 0.018*"srv" + 0.014*"net" + 0.014*"cantaloupe" + 0.013*"d"
+Topic 5: 0.012*"go" + 0.011*"get" + 0.009*"rec" + 0.009*"car" + 0.008*"well" + 0.007*"one" + 0.007*"year" + 0.007*"think" + 0.007*"would" + 0.007*"say"
+Topic 6: 0.026*"comp" + 0.013*"window" + 0.013*"use" + 0.011*"file" + 0.010*"graphic" + 0.009*"os" + 0.008*"windows" + 0.008*"ms" + 0.008*"image" + 0.007*"system"
+Topic 7: 0.020*"key" + 0.015*"government" + 0.014*"crypt" + 0.014*"security" + 0.013*"clipper" + 0.011*"law" + 0.010*"org" + 0.008*"privacy" + 0.008*"public" + 0.008*"right"
+Topic 8: 0.073*"edu" + 0.019*"cs" + 0.015*"news" + 0.014*"apr" + 0.014*"cmu" + 0.012*"net" + 0.012*"de" + 0.012*"gov" + 0.011*"srv" + 0.010*"nasa"
+Topic 9: 0.375*"ax" + 0.028*"max" + 0.013*"au" + 0.007*"pl" + 0.006*"ei" + 0.005*"di" + 0.005*"cx" + 0.004*"um" + 0.004*"purdue" + 0.004*"nz"
+Predicted Topics (Topic ID, Score):
+Topic 5: 0.6303
+Topic 3: 0.2693
+Topic 6: 0.0126
+Topic 1: 0.0125
+Topic 2: 0.0125
+Topic 0: 0.0125
+Topic 8: 0.0125
+Topic 4: 0.0125
+Topic 7: 0.0125
+Topic 9: 0.0125
+

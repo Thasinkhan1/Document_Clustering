@@ -1,18 +1,42 @@
+# inference.py
 from config import config
-from data_loading import data_loadings
-from gensim.models import CoherenceModel
 from gensim import corpora
+from gensim.models import LdaModel
+from data_transformation import transforming_data
+from gensim.corpora import Dictionary
 
-lda_model = data_loadings.load_model()
-lemmatized_word = data_loadings.loading_lemmatized_word()
-dictionary = corpora.Dictionary(lemmatized_word)
 
-def coherence():
+def load_model_and_dict():
+    model = LdaModel.load(config.SAVED_MODEL)
+    dictionary = Dictionary.load(config.SAVED_DICT)
+
+    return model, dictionary
+
+def infer_topics(text):
+    model, dictionary = load_model_and_dict()
+
     
-    coherence_model = CoherenceModel(model=lda_model, texts=lemmatized_word, dictionary=dictionary, coherence='c_v')
-    coherence_score = coherence_model.get_coherence()
+    tokens = transforming_data.apply_tokenization([text])
+    print("Tokenized:", tokens)
 
-    return coherence_score
+    tokens = tokens[0]
+    lemmatized_tokens = transforming_data.lemmatized(tokens)
+    print("Lemmatized:", lemmatized_tokens)
+
+    bow_vector = dictionary.doc2bow(lemmatized_tokens)
+    print("BoW:", bow_vector)
+
+    topics = model.get_document_topics(bow_vector)
+    topics = sorted(topics, key=lambda x: -x[1])
+    for topic_id, topic in model.print_topics(num_words=10):
+          print(f"Topic {topic_id}: {topic}")
+
+    return topics
 
 
-print(f"Coherence Score is : {coherence():.4f}")
+if __name__ == "__main__":
+    test_text = "Crop leaves have yellow spots and fungal infection."
+    topics = infer_topics(test_text)
+    print("Predicted Topics (Topic ID, Score):")
+    for topic_id, score in topics:
+        print(f"Topic {topic_id}: {score:.4f}")

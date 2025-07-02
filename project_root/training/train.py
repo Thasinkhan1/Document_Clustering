@@ -3,9 +3,10 @@ from gensim import corpora
 from data_loading import data_loadings
 import gensim.models.ldamodel
 
-lemmatized_word = data_loadings.loading_lemmatized_word()
 def train_lda_model():
-    dictionary = corpora.Dictionary(lemmatized_word)
+    lemmatized_word = data_loadings.loading_lemmatized_word()
+    #dictionary = corpora.Dictionary(lemmatized_word)
+    dictionary = config.SAVED_DICT
     corpus_gensim = [dictionary.doc2bow(text) for text in lemmatized_word]
 
     lda_gensim = gensim.models.ldamodel.LdaModel(
